@@ -28,7 +28,8 @@ local astro_plugins = {
     event = "UIEnter",
     config = function() require "configs.dressing" end,
   },
-
+  vim.g.copilot_no_tab_map = true
+  vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
   -- Smarter Splits
   ["mrjones2014/smart-splits.nvim"] = {
     module = "smart-splits",
